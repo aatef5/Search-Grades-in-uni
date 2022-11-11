@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            document.writeln("<h1> Student Results </h1><hr>");
+            window.alert("Welcome to student Results");
+            id= window.prompt("Enter your ID");
+            quiz1= window.prompt("Enter your grade in 1st Quiz.");
+            int1= parseInt(id);
+            int2= parseInt(quiz1);
+            let grade= [
+ {
+  "Name": "Ahmad Atef",
+  "ID": 193887,
+  "Quiz1": 10,
+  "Quiz2": 16
+ },
+ {
+  "Name": "Aya Mostafa",
+  "ID": 193731,
+  "Quiz1": 9,
+  "Quiz2": 8
+ },
+ {
+  "Name": "Sayed",
+  "ID": 194615,
+  "Quiz1": 8
+ }
+];
+            //document.writeln(int1);
+            //var count = Object.keys(grades).length;
+            var count=Object.keys(grade).length; //3
+            //console.log(count);
+            var flag=0;
+            //document.writeln(flag);
+            for (let i=0 ; i<=count; ++i){
+                //document.writeln(grade[i].ID);
+                if (grade[i]?.ID == id && grade[i].Quiz1==quiz1){
+                    //document.writeln("Found");
+                    //document.writeln(i);
+                    //no= parseInt(i);
+                    flag= 1;
+                    outputarray(grade,i);
+                    break;
+
+                }
+                //flag=0;
+                
+                /*else{
+                    document.writeln("<h1> Your Data is wrong!</h1>")
+                    //break;
+                }*/
+            }
+            //console.log(flag);
+            //document.writeln("<p>"+flag+ "</p>");
+            if (flag==0){document.write("<h1> Your Data is Wrong! Please Enter Valid Data!</h1>")};
+            //if (flag=false){alert("Your Data is wrong!")}
+
+            //outputarray(grade,no);
+            function outputarray (thearray, conter){
+                document.writeln("<table border = \"1\"");
+                document.writeln("<thead><th>Name</th>"+ "<th>ID</th>" +  "<th>Quiz1</th>"+  "<th>Quiz2</th>"+  "<th>Quiz3</th>"+ "<th>Quiz4</th></thead><tbody>");
+                document.writeln("<tr><td>"+thearray[conter].Name+"</td><td>"+ thearray[conter].ID+"</td><td>"+ thearray[conter].Quiz1+"</td><td>"+thearray[conter].Quiz2 +"</td><td>"+thearray[conter].Quiz3 + "</td><td>"+thearray[conter].Quiz4 + "</td></tr>");
+                document.writeln("</tbody></table>");
+            }
+
+
+
+        </script>
+        <title>Grades</title>
+        <style>
+            body {background-image: url(msa.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+            }
+            h1, h2 {
+                color: midnightblue;
+            }
+            th, td {
+                 padding: 15px;
+                text-align: left;
+            }
+            tr:hover {background-color: coral;}
+            tr {font-weight: bold;}
+            th {background-color: darkorange; color: antiquewhite; font-weight: bolder;}
+            hr {font-weight: bolder; color: orangered; size: "100";}
+        </style>
+    </head>
+    <body>
+        <h2>Best of luck!</h2>
+    </body>
+</html>
